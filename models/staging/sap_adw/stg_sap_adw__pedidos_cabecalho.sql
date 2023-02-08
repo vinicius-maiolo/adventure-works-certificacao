@@ -6,7 +6,7 @@ with
         , cast(orderdate as	timestamp) as data_pedido			
         --, duedate			
         , cast(shipdate	as timestamp) as data_envio			
-        , cast(status as integer)			
+        , cast(status as integer) as status		
         , cast(onlineorderflag as boolean) as eh_online
         --, cast(purchaseordernumber as string) as ordem_de_compra 				
         --, accountnumber				

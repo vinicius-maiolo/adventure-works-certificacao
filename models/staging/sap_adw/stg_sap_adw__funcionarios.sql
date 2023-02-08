@@ -1,7 +1,7 @@
 with 
     source_funcionarios as(
         select
-        cast(businessentityid as int) as id_funcionario
+        cast(businessentityid as int) as id_pessoa
         , cast(nationalidnumber as int) as documento_funcionario 			
         , cast(loginid as string) as login_funcionario
         , cast(jobtitle as string) as cargo_funcionario
