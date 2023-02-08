@@ -1,0 +1,113 @@
+version: 2
+
+sources:
+  - name: sap_adw
+    description: Banco de dados do SAP da Adventure Work, hospedado na Google Cloud Platform.
+    schema: sap_adw
+    tables:
+      - name: address 
+        description: Tabela contendo os endereços dos clientes da Adventure Works. 
+        columns: 
+          - name: addressid
+            description: Coluna de identificação do endereço (PK da tabela)
+            tests: 
+              - unique
+              - not_null
+
+          - name: addressline1
+            description: Coluna de detalhamento do id do endereço.
+            tests: 
+              - not_null
+              
+          - name: addressline2
+            description: Coluna de extensão do detalhamento do endereço, se necessário.
+            
+          - name: city  
+            description: Coluna contendo a cidade referente ao endereço.  
+            tests: 
+              - not_null      
+
+      - name: creditcard 
+        description: Tabela contendo informações dos cartões de crédito de clientes
+        columns: 
+          - name: creditcardid
+            description: Primary Key da tabela de cartões de crédito, contendo o id do cartão utilizado na compra.
+            tests: 
+              - unique
+              - not_null
+
+          - name: cardtype
+            description: Coluna que define o tipo (bandeira) de cartão de crédito utilizado.
+            tests:
+              - not_null
+
+          - name: cardnumber
+            description: Coluna que define o número do cartão de crédito utilizado utilizado.
+            tests:
+              - not_null
+
+          - name: expmonth
+            description: Coluna que apresenta o mês de expiração do cartão de crédito utilizado.
+            tests:
+              - not_null
+
+          - name: expyear
+            description: Coluna que apresenta o ano de expiração do cartão de crédito utilizado.
+            tests:
+              - not_null
+            
+
+
+      - name: countryregion
+        description: Tabela que contém países e seus respectivos códigos de identificação
+        columns:
+          - name: countryregioncode
+            description: Código único de cada país, que o define na tabela de países (Primary Key)
+            tests: 
+              - unique
+              - not_null
+          
+          - name: name
+            description: Nome do país.
+            tests:
+            - not_null
+
+
+      - name: customer
+        description: Tabela de clientes da Adventure Works. 
+
+      - name: employee
+        description: Tabela de funcionários da Adventure Works.
+
+      - name: person
+        description: Tabela de pessoas relacionadas à empresa Adventure Works.
+
+      - name: product
+        description: Tabela de produtos da Adventure Works.
+
+      - name: productcategory
+        description: Tabela de categoria de produtos da Adventure Works. 
+
+      - name: salesorderdetail
+        description: Tabela de detalhamento de pedido da Adventure Works
+
+      - name: salesorderheader
+        description: Tabela de cabeçalho de pedido da Adventure Works. 
+
+      - name: salesperson
+        description: Tabela de vendedores da Adventure Works.
+
+      - name: salesreason
+        description: Tabela de razão de venda da Adventure Works. 
+
+      - name: stateprovince
+        description: Tabela de estados da Adventure Works. 
+
+
+       
+          
+
+
+
+
+              
